@@ -1,0 +1,51 @@
+{
+  "emmet.excludeLanguages": ["markdown"],
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "erb": "html",
+    "vue": "html",
+    "javascript": "javascriptreact"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.minimap.enabled": false,
+  "explorer.confirmDelete": false,
+  "eslint.packageManager": "npm",
+  "npm.packageManager": "npm",
+  "prettier.singleQuote": true,
+  "vetur.validation.script": false,
+  "vetur.validation.style": false,
+  "vetur.validation.template": false,
+  "eslint.options": {},
+  "eslint.validate": [
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "javascript",
+      "autoFix": true
+    }
+  ],
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.fontSize": 16,
+  "eslint.codeActionsOnSave.mode": "all",
+  "workbench.settings.editor": "ui",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "files.autoSave": "onFocusChange",
+  "explorer.confirmDragAndDrop": false,
+  "workbench.sideBar.location": "right",
+  "explorer.openEditors.visible": 0,
+  "editor.linkedEditing": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.useTabs": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.semi": false,
+  "workbench.settings.useSplitJSON": true
+}

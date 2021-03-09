@@ -8,8 +8,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import styled, { createGlobalStyle } from 'styled-components';
-
+import styled, { createGlobalStyle } from "styled-components"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -30,7 +29,7 @@ const Layout = ({ children }) => {
           marginTop: `2rem`,
         }}
       >
-        © {new Date().getFullYear()}, Built by F.Nagel
+        © {new Date().getFullYear()}, Built by Felix Nagel
       </footer>
     </>
   )

@@ -38,25 +38,25 @@ const Gallery = ({ data }) => {
     height: 25rem;
     border-radius: 5%;
 
-    @media ${device.mobileL} {
-      width: 25rem;
-      height: 25rem;
+    ${"" /* &:nth-child(2n + 2) {
+      width: 15rem;
+    } */}
+
+    @media ${device.sm} {
+    width: 20rem;
+    height: 20rem;
     }
-    @media ${device.tablet} {
-      width: 20rem;
-      height: 20rem;
+
+    @media ${device.md} {
+    width: 15rem;
+    height: 15rem;
     }
-    @media ${device.laptop} {
-      width: 20rem;
-      height: 20rem;
+
+    @media ${device.xl} {
+    width: 20rem;
+    height: 20rem;
     }
-    @media ${device.laptopL} {
-      width: 20rem;
-      height: 20rem;
-    }
-    @media ${device.desktop} {
-      width: 25rem;
-      height: 25rem;
+
     }
   `
 

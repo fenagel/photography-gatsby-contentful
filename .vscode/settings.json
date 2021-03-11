@@ -6,7 +6,7 @@
     "vue": "html",
     "javascript": "javascriptreact"
   },
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "eq-material-theme-icons-palenight",
   "editor.minimap.enabled": false,
   "explorer.confirmDelete": false,
   "eslint.packageManager": "npm",

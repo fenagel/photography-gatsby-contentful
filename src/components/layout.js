@@ -1,28 +1,13 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import styled, { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components"
+import Navbar from "./navbar"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
+      <GlobalStyle />
+      <Navbar />
       <main>{children}</main>
       <footer
         style={{
@@ -42,17 +27,15 @@ Layout.propTypes = {
 export default Layout
 
 // Global Styles
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 
   :root {
-    --color-base: #100B00;
-    --color-secondary: #F5F5F5 ;
-    --color-tertiary: #c1c1c1 ;
-    --color-highlight: #C0392B ;
-    --color-accent: #444444 ;
+    --color-base: #fefefe;
+    --color-secondary: #414042;
+    --color-accent: #209573;
 
-    --font-primary: "Nunito", sans-serif;
-    --font-display: "Josefin Sans", sans-serif;
+    --font-primary: "Red Hat Text", sans-serif;
+    --font-display: "Red Hat Display", sans-serif;
 
     --bp-largest: 75em;
     --bp-large: 62.5em;
@@ -80,26 +63,24 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: var(--font-primary);
-    color: var(--color-base);
-    font-weight: 300;
+    color: var(--color-secondary);
+    font-weight: 400;
     line-height: 1.6;
     overflow-y: scroll;
   }
 
-  body::-webkit-scrollbar {
-    width: 12px;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    line-height: 1.3;
+    font-weight: 400;
+    color: var(--color-secondary);
   }
-  html {
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-base) var(--color-base);
-  }
-  body::-webkit-scrollbar-track {
-    background: var(--color-base);
-  }
-  body::-webkit-scrollbar-thumb {
-    background-color: var(--color-base) ;
-    border-radius: 6px;
-    border: 3px solid var(--color-base);
+
+  a {
+    &, &:focus, &:hover, &:active, &:visited {
+    text-decoration: none;
+    color: var(--color-secondary);
+    }
   }
 
 `

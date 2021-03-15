@@ -23,7 +23,7 @@ export const query = graphql`
         gatsbyImageData
       }
       featuredImages {
-        gatsbyImageData
+        gatsbyImageData(layout: CONSTRAINED, resizingBehavior: FILL)
       }
     }
   }
@@ -56,7 +56,6 @@ const Gallery = ({ data }) => {
             formats={["AUTO", "WEBP", "AVIF"]}
             image={image}
             alt={gallery.title}
-            layout="constrained"
             key={i}
           />
         ))}
